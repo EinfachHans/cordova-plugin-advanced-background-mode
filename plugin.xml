@@ -59,10 +59,10 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="BackgroundMode">
-                <param name="android-package" value="de.appplant.cordova.plugin.background.BackgroundMode"/>
+                <param name="android-package" value="de.hanskrywaa.BackgroundMode"/>
             </feature>
             <feature name="BackgroundModeExt">
-                <param name="android-package" value="de.appplant.cordova.plugin.background.BackgroundModeExt"/>
+                <param name="android-package" value="de.hanskrywaa.BackgroundModeExt"/>
             </feature>
         </config-file>
 
@@ -71,7 +71,7 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <service android:name="de.appplant.cordova.plugin.background.ForegroundService" />
+            <service android:name="de.hanskrywaa.ForegroundService" />
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
@@ -80,15 +80,15 @@
 
         <source-file
             src="src/android/BackgroundMode.java"
-            target-dir="src/de/appplant/cordova/plugin/background" />
+            target-dir="src/de/hanskrywaa" />
 
         <source-file
             src="src/android/BackgroundModeExt.java"
-            target-dir="src/de/appplant/cordova/plugin/background" />
+            target-dir="src/de/hanskrywaa" />
 
         <source-file
             src="src/android/ForegroundService.java"
-            target-dir="src/de/appplant/cordova/plugin/background" />
+            target-dir="src/de/hanskrywaa" />
     </platform>
 
     <!-- browser -->
