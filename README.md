@@ -1,10 +1,16 @@
-
-<p align="left">
-    <b><a href="https://github.com/katzer/cordova-plugin-background-mode/tree/example">SAMPLE APP</a> :point_right:</b>
-</p>
-
 Cordova Background Plugin [![npm version](https://badge.fury.io/js/cordova-plugin-background-mode.svg)](http://badge.fury.io/js/cordova-plugin-background-mode) [![Build Status](https://travis-ci.org/katzer/cordova-plugin-background-mode.svg?branch=master)](https://travis-ci.org/katzer/cordova-plugin-background-mode) [![codebeat badge](https://codebeat.co/badges/49709283-b313-4ced-8630-f520baaec7b5)](https://codebeat.co/projects/github-com-katzer-cordova-plugin-background-mode)
 =========================
+
+### Original Plugin
+
+This Plugin is a fork of [this](https://github.com/katzer/cordova-plugin-background-mode) absolutely awesome Plugin by Katzer!
+Because it is unmainted, i decided to create this and keep it updated.
+
+#### Changes to Original Plugin
+- Added Wrapper for Ionic (See [Usage](#usage)) 
+- Fix Music stops at Launch on iOS ([issue](https://github.com/katzer/cordova-plugin-background-mode/issues/481))
+
+### Description
 
 Plugin for the [Cordova][cordova] framework to perform infinite background execution.
 
@@ -29,28 +35,20 @@ The plugin can be installed via [Cordova-CLI][CLI] and is publicly available on 
 
 Execute from the projects root folder:
 
-    $ cordova plugin add cordova-plugin-background-mode
-
-Or install a specific version:
-
-    $ cordova plugin add de.appplant.cordova.plugin.background-mode@VERSION
-
-Or install the latest head version:
-
-    $ cordova plugin add https://github.com/katzer/cordova-plugin-background-mode.git
-
-Or install from local source:
-
-    $ cordova plugin add cordova-plugin-background-mode --searchpath <path>
+    $ cordova plugin add cordova-plugin-advanced-background-mode
 
 
 ## Usage
 The plugin creates the object `cordova.plugins.backgroundMode` and is accessible after the *deviceready* event has been fired.
+It also includes an Ionic Wrapper
 
-```js
+```ts
 document.addEventListener('deviceready', function () {
     // cordova.plugins.backgroundMode is now available
 }, false);
+
+<!-- Ionic Wrapper -->
+import BackgroundMode from 'cordova-plugin-advanced-background-mode';
 ```
 
 ### Enable the background mode
@@ -193,10 +191,6 @@ __Note:__ Calling the method led to increased resource and power consumption.
 ## License
 
 This software is released under the [Apache 2.0 License][apache2_license].
-
-Made with :yum: from Leipzig
-
-? 2017 [appPlant GmbH][appplant] & [meshfields][meshfields]
 
 
 [cordova]: https://cordova.apache.org
