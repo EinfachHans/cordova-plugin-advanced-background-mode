@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-advanced-background-mode",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Prevent apps from going to sleep in background.",
   "cordova": {
     "id": "cordova-plugin-advanced-background-mode",
