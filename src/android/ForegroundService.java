@@ -19,7 +19,7 @@
  under the License.
  */
 
-package de.appplant.cordova.plugin.background;
+package de.hanskrywaa;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
