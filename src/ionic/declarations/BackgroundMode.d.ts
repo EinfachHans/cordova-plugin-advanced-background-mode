@@ -15,7 +15,7 @@ declare module 'cordova-plugin-advanced-background-mode' {
         
         static getSettings(): Options;
         
-        static setDefaults(override: Options);
+        static setDefaults(override: Options, callback?: () => void);
         
         static configure(override: Options);
         

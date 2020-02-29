@@ -29,6 +29,8 @@ import android.os.IBinder;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginResult;
+import org.apache.cordova.PluginResult.Status;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -97,6 +99,8 @@ public class BackgroundMode extends CordovaPlugin {
         {
             case "configure":
                 configure(args.optJSONObject(0), args.optBoolean(1));
+                PluginResult res = new PluginResult(Status.OK);
+                callback.sendPluginResult(res);
                 break;
             case "enable":
                 enableMode();

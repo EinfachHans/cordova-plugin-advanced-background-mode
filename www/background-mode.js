@@ -104,7 +104,7 @@ exports.getSettings = function()
  *
  * @return [ Void ]
  */
-exports.setDefaults = function (overrides)
+exports.setDefaults = function (overrides, fn)
 {
     var defaults = this.getDefaults();
 
@@ -118,7 +118,7 @@ exports.setDefaults = function (overrides)
 
     if (this._isAndroid)
     {
-        cordova.exec(null, null, 'BackgroundMode', 'configure', [defaults, false]);
+        cordova.exec((fn || function () {}), null, 'BackgroundMode', 'configure', [defaults, false]);
     }
 };
 
