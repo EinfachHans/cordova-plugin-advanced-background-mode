@@ -9,6 +9,7 @@ Because it is unmainted, i decided to create this and keep it updated.
 #### Changes to Original Plugin
 - Added Wrapper for Ionic (See [Usage](#usage)) 
 - Fix Music stops at Launch on iOS ([issue](https://github.com/katzer/cordova-plugin-background-mode/issues/481))
+- Method `includeToTaskList` added
 
 ### Description
 
@@ -107,18 +108,25 @@ Override the back button on Android to go to background instead of closing the a
 cordova.plugins.backgroundMode.overrideBackButton();
 ```
 
-### Recent task list
-Exclude the app from the recent task list works on Android 5.0+.
+### Exclude from Task list
+Exclude the app from the recent task list (works on Android 5.0+).
 
 ```js
 cordova.plugins.backgroundMode.excludeFromTaskList();
+```
+
+### Include to Task list
+Include the app to the recent task list (works on Android 5.0+).
+
+```js
+cordova.plugins.backgroundMode.includeToTaskList();
 ```
 
 ### Detect screen status
 The method works async instead of _isActive()_ or _isEnabled()_.
 
 ```js
-cordova.plugins.backgroundMode.isScreenOff(function(bool) {
+cordova.plugins.backgroundMode.isScreenOff((bool) => {
     ...
 });
 ```

@@ -229,7 +229,20 @@ exports.excludeFromTaskList = function()
 {
     if (this._isAndroid)
     {
-        cordova.exec(null, null, 'BackgroundModeExt', 'tasklist', []);
+        cordova.exec(null, null, 'BackgroundModeExt', 'tasklistExclude', []);
+    }
+};
+
+/**
+ * Include the app back to the recent tasks list (Android only).
+ *
+ * @return [ Void ]
+ */
+exports.includeToTaskList = function()
+{
+    if (this._isAndroid)
+    {
+        cordova.exec(null, null, 'BackgroundModeExt', 'tasklistInclude', []);
     }
 };
 

@@ -30,7 +30,9 @@ declare module 'cordova-plugin-advanced-background-mode' {
         static moveToForeground();
         
         static excludeFromTaskList();
-        
+
+        static includeToTaskList();
+
         static overrideBackButton();
         
         static isScreenOff(callback: (result: any) => void);

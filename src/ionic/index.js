@@ -70,6 +70,11 @@ var BackgroundMode = /** @class */ (function () {
     return plu.excludeFromTaskList.apply(plu, arguments);
   };
 
+  BackgroundMode.includeToTaskList = function () {
+    var plu = plugin();
+    return plu.includeToTaskList.apply(plu, arguments);
+  };
+
   BackgroundMode.overrideBackButton = function () {
     var plu = plugin();
     return plu.overrideBackButton.apply(plu, arguments);

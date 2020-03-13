@@ -102,8 +102,11 @@ public class BackgroundModeExt extends CordovaPlugin {
             case "foreground":
                 moveToForeground();
                 break;
-            case "tasklist":
-                excludeFromTaskList();
+            case "tasklistExclude":
+                setExcludeFromRecents(true);
+                break;
+            case "tasklistInclude":
+                setExcludeFromRecents(false);
                 break;
             case "dimmed":
                 isDimmed(callback);
@@ -262,10 +265,10 @@ public class BackgroundModeExt extends CordovaPlugin {
     }
 
     /**
-     * Excludes the app from the recent tasks list.
+     * Excludes or Includes the app from the recent tasks list.
      */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    private void excludeFromTaskList()
+    private void setExcludeFromRecents(boolean value)
     {
         ActivityManager am = (ActivityManager) getService(ACTIVITY_SERVICE);
 
@@ -277,7 +280,7 @@ public class BackgroundModeExt extends CordovaPlugin {
         if (tasks == null || tasks.isEmpty())
             return;
 
-        tasks.get(0).setExcludeFromRecents(true);
+        tasks.get(0).setExcludeFromRecents(value);
     }
 
     /**
