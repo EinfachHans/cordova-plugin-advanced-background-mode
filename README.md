@@ -1,4 +1,4 @@
-Cordova Background Plugin [![npm version](https://badge.fury.io/js/cordova-plugin-background-mode.svg)](http://badge.fury.io/js/cordova-plugin-background-mode) [![Build Status](https://travis-ci.org/katzer/cordova-plugin-background-mode.svg?branch=master)](https://travis-ci.org/katzer/cordova-plugin-background-mode) [![codebeat badge](https://codebeat.co/badges/49709283-b313-4ced-8630-f520baaec7b5)](https://codebeat.co/projects/github-com-katzer-cordova-plugin-background-mode)
+Cordova Background Plugin [![npm version](https://badge.fury.io/js/cordova-plugin-advanced-background-mode.svg)](https://badge.fury.io/js/cordova-plugin-advanced-background-mode)
 =========================
 
 ### Original Plugin
