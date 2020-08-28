@@ -6,16 +6,11 @@
         version="1.1.0">
 
     <name>BackgroundMode</name>
-
     <description>Prevent apps from going to sleep in background.</description>
-
-    <repo>https://github.com/HansKrywaa/cordova-plugin-advanced-background-mode</repo>
-
+    <repo>https://github.com/EinfachHans/cordova-plugin-advanced-background-mode</repo>
     <keywords>cordova, background, mode</keywords>
-
     <license>Apache 2.0</license>
-
-    <author>HansKrywaa</author>
+    <author>EinfachHans</author>
 
     <!-- dependencies -->
     <dependency id="cordova-plugin-device" />
@@ -59,10 +54,10 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="BackgroundMode">
-                <param name="android-package" value="de.hanskrywaa.BackgroundMode"/>
+                <param name="android-package" value="de.einfachhans.BackgroundMode.BackgroundMode"/>
             </feature>
             <feature name="BackgroundModeExt">
-                <param name="android-package" value="de.hanskrywaa.BackgroundModeExt"/>
+                <param name="android-package" value="de.einfachhans.BackgroundMode.BackgroundModeExt"/>
             </feature>
         </config-file>
 
@@ -71,7 +66,7 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <service android:name="de.hanskrywaa.ForegroundService" />
+            <service android:name="de.einfachhans.BackgroundMode.ForegroundService" />
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
@@ -80,15 +75,15 @@
 
         <source-file
             src="src/android/BackgroundMode.java"
-            target-dir="src/de/hanskrywaa" />
+            target-dir="src/de/einfachhans/BackgroundMode" />
 
         <source-file
             src="src/android/BackgroundModeExt.java"
-            target-dir="src/de/hanskrywaa" />
+            target-dir="src/de/einfachhans/BackgroundMode" />
 
         <source-file
             src="src/android/ForegroundService.java"
-            target-dir="src/de/hanskrywaa" />
+            target-dir="src/de/einfachhans/BackgroundMode" />
     </platform>
 
     <!-- browser -->

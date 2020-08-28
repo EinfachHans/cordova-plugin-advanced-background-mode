@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HansKrywaa/cordova-plugin-advanced-background-mode"
+    "url": "git+https://github.com/EinfachHans/cordova-plugin-advanced-background-mode"
   },
   "keywords": [
     "appplant",
@@ -32,12 +32,12 @@
       "version": ">=16"
     }
   ],
-  "author": "HansKrywaa",
+  "author": "EinfachHans",
   "license": "Apache 2.0",
   "main": "./src/ionic/index.js",
   "types": "./src/ionic/index.d.ts",
   "bugs": {
-    "url": "https://github.com/HansKrywaa/cordova-plugin-advanced-background-mode/issues"
+    "url": "https://github.com/EinfachHans/cordova-plugin-advanced-background-mode/issues"
   },
-  "homepage": "https://github.com/HansKrywaa/cordova-plugin-advanced-background-mode"
+  "homepage": "https://github.com/EinfachHans/cordova-plugin-advanced-background-mode"
 }
