@@ -10,6 +10,9 @@
       "browser"
     ]
   },
+  "scripts": {
+    "doctoc": "doctoc readme.md --github --title '**Table of Content**' --maxlevel 3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EinfachHans/cordova-plugin-advanced-background-mode"

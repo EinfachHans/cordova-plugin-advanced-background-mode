@@ -1,45 +1,75 @@
-Cordova Background Plugin [![npm version](https://badge.fury.io/js/cordova-plugin-advanced-background-mode.svg)](https://badge.fury.io/js/cordova-plugin-advanced-background-mode)
+Cordova Background Plugin
 =========================
+![Maintenance](https://img.shields.io/maintenance/yes/2020)
+[![npm version](https://badge.fury.io/js/cordova-plugin-advanced-background-mode.svg)](https://badge.fury.io/js/cordova-plugin-advanced-background-mode)
 
-### Original Plugin
+Plugin for the [Cordova](https://cordova.apache.org) framework to perform infinite background execution.
+
+Most mobile operating systems are multitasking capable, but most apps dont need to run while in background and not present for the user. Therefore they pause the app in background mode and resume the app before switching to foreground mode.
+The system keeps all network connections ope.githubn while in background, but does not deliver the data until the app resumes.
+
+<!-- DONATE -->
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LMX5TSQVMNMU6&source=url)
+
+This and other Open-Source Cordova Plugins are developed in my free time.
+To help ensure this plugin is kept updated, new features are added and bugfixes are implemented quickly, please donate a couple of dollars (or a little more if you can stretch) as this will help me to afford to dedicate time to its maintenance.
+Please consider donating if you're using this plugin in an app that makes you money, if you're being paid to make the app, if you're asking for new features or priority bug fixes.
+<!-- END DONATE -->
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Content**
+
+- [Original Plugin](#original-plugin)
+- [Store Compliance](#store-compliance)
+- [Supported Platforms](#supported-platforms)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Both Platforms](#both-platforms)
+    - [Enable the background mode](#enable-the-background-mode)
+    - [Check if running in background](#check-if-running-in-background)
+    - [Listen for events](#listen-for-events)
+  - [Android specifics](#android-specifics)
+    - [Transit between application states](#transit-between-application-states)
+    - [Back button](#back-button)
+    - [Exclude from Task list](#exclude-from-task-list)
+    - [Include to Task list](#include-to-task-list)
+    - [Detect screen status](#detect-screen-status)
+    - [Unlock and wake-up](#unlock-and-wake-up)
+    - [Notification](#notification)
+- [Quirks](#quirks)
+- [Contributing](#contributing)
+- [Changelog](#changelog)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+# Original Plugin
 
 This Plugin is a fork of [this](https://github.com/katzer/cordova-plugin-background-mode) absolutely awesome Plugin by Katzer!
 Because it is unmainted, i decided to create this and keep it updated.
 
-#### Changes to Original Plugin
-- Added Wrapper for Ionic (See [Usage](#usage)) 
-- Fix Music stops at Launch on iOS ([issue](https://github.com/katzer/cordova-plugin-background-mode/issues/481))
-- Method `includeToTaskList` added
-
-### Description
-
-Plugin for the [Cordova][cordova] framework to perform infinite background execution.
-
-Most mobile operating systems are multitasking capable, but most apps dont need to run while in background and not present for the user. Therefore they pause the app in background mode and resume the app before switching to foreground mode.
-The system keeps all network connections open while in background, but does not deliver the data until the app resumes.
-
-#### Store Compliance
+# Store Compliance
 Infinite background tasks are not official supported on most mobile operation systems and thus not compliant with public store vendors. A successful submssion isn't garanteed.
 
 Use the plugin by your own risk!
 
 
-## Supported Platforms
+# Supported Platforms
 - __Android/Amazon FireOS__
 - __Browser__
 - __iOS__
 - __Windows__ _(see #222)_
 
 
-## Installation
-The plugin can be installed via [Cordova-CLI][CLI] and is publicly available on [NPM][npm].
+# Installation
+The plugin can be installed via [Cordova-CLI](http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-line%20Interface) and is publicly available on [NPM](https://www.npmjs.com/package/cordova-plugin-advanced-background-mode).
 
 Execute from the projects root folder:
 
     $ cordova plugin add cordova-plugin-advanced-background-mode
 
 
-## Usage
+# Usage
 The plugin creates the object `cordova.plugins.backgroundMode` and is accessible after the *deviceready* event has been fired.
 It also includes an Ionic Wrapper
 
@@ -51,6 +81,8 @@ document.addEventListener('deviceready', function () {
 <!-- Ionic Wrapper -->
 import BackgroundMode from 'cordova-plugin-advanced-background-mode';
 ```
+
+## Both Platforms
 
 ### Enable the background mode
 The plugin is not enabled by default. Once it has been enabled the mode becomes active if the app moves to background.
@@ -164,7 +196,7 @@ To modify the currently displayed notification
 cordova.plugins.backgroundMode.configure({ ... });
 ```
 
-__Note:__ All properties are optional - only override the things you need to.
+**Note:** All properties are optional - only override the things you need to.
 
 #### Run in background without notification
 In silent mode the plugin will not display a notification - which is not the default. Be aware that Android recommends adding a notification otherwise the OS may pause the app.
@@ -174,7 +206,7 @@ cordova.plugins.backgroundMode.setDefaults({ silent: true });
 ```
 
 
-## Quirks
+# Quirks
 
 Various APIs like playing media or tracking GPS position in background might not work while in background even the background mode is active. To fix such issues the plugin provides a method to disable most optimizations done by Android/CrossWalk.
 
@@ -184,10 +216,10 @@ cordova.plugins.backgroundMode.on('activate', function() {
 });
 ```
 
-__Note:__ Calling the method led to increased resource and power consumption.
+**Note:** Calling the method led to increased resource and power consumption.
 
 
-## Contributing
+# Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -196,15 +228,6 @@ __Note:__ Calling the method led to increased resource and power consumption.
 5. Create new Pull Request
 
 
-## License
+# Changelog
 
-This software is released under the [Apache 2.0 License][apache2_license].
-
-
-[cordova]: https://cordova.apache.org
-[CLI]: http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-line%20Interface
-[NPM]: ???
-[changelog]: CHANGELOG.md
-[apache2_license]: http://opensource.org/licenses/Apache-2.0
-[appplant]: http://appplant.de
-[meshfields]: http://meshfields.de
+The full Changelog is available [here](CHANGELOG.md).

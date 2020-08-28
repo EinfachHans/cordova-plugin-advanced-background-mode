@@ -1,20 +1,29 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: 'Feat:'
+title: "(feature-request):"
 labels: triage
 assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+<!--
+WARNING: Failure to follow the issue template guidelines below will result in the issue being immediately closed.
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+Only feature requests should be opened here.
+-->
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+# Feature request
+<!--
+Feature requests should include as much detail as possible:
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+- A descriptive title 
+- A description of the problem you're trying to solve, including why you think this is a problem
+- An overview of the suggested solution
+- Use case: why should this be implemented?
+- If the feature changes current behavior, reasons why your solution is better
+- Relevant links, e.g.
+    - Stack Overflow post illustrating a solution
+    - Code within a Github repo that illustrates a solution
+    - Native API documentation for proposed feature
+-->
